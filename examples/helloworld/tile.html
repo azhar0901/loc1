@@ -18,25 +18,7 @@ body { background:#80a0f0; overflow:hidden;}
 <a-entity a-tile="lod:14;buildingTexture:../env/glacier4.png" position="-350 29 240" rotation="-90 0 0"></a-entity>
 
 
-<a-entity id="cameraRig">
-<a-entity
-    id="camera"
-    position="0 10 0"
-camera="near:1;far:100000"
-    wasd-controls="fly:true" 
-    look-controls
-    unused_orbit-controls="
-        autoRotate: false;
-        target: #target;
-        enableDamping: true;
-        dampingFactor: 0.125;
-        rotateSpeed:0.10;
-        minDistance:0;
-        maxDistance:1000;
-        minPolarAngle:0.1;
-        maxPolarAngle:3.04159265359;
-        enableProportionalVelocity:true;
-    ">
+
 </a-entity>
 <a-entity id="lefthand" camera-transform-controls-hand="hand:left" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left"></a-entity>
 <a-entity id="righthand" camera-transform-controls-hand="hand:right" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right"></a-entity>
@@ -47,5 +29,6 @@ camera="near:1;far:100000"
   <a-entity environment="preset: forest; ground:none; playArea:10;"></a-entity>
 
 </a-scene>
-
+<a-camera gps-camera rotation-reader>
+</a-camera>
 
